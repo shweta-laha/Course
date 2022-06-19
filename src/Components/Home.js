@@ -4,10 +4,10 @@ import {Container, Button} from "reactstrap"
 const Home =() => {
     return (
         <div>
-            <div className="jumbotron">
-                <div className="text-center">
-                    <h1 className="display-3">First Application</h1>
-                    <p>This is developed by M.Roy for the betterment of the world and this nation.</p>
+            <div className="jumbotron my-2">
+                <div className="text-center my-5">
+                    <h1 className="display-4" style={{ fontFamily: "AssistantRegular"}}>First Application</h1>
+                    <p style={{fontFamily: "ui-serif"}}>This is developed by Manikanchan Roy, Shweta Laha, Souvik Debnath, Shaoni Bose for the betterment of the world and this nation.</p>
                     <Container>
                         <Button color="primary">Start Using my Application</Button>
                     </Container>

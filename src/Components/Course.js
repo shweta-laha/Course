@@ -3,9 +3,7 @@ import {
     Card,
     CardBody,
     CardTitle,
-    CardSubtitle,
     CardText,
-    CardFooter,
     Container,
     Button,
 } from 'reactstrap';

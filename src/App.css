@@ -1,3 +1,9 @@
+.body{
+  background: linear-gradient(to bottom right, rgb(245, 245, 51), rgb(192, 250, 182),rgb(2, 52, 22));
+  min-height: 900px;
+  font-family: ui-serif;
+  
+}
 .App {
   text-align: center;
 }
@@ -67,3 +73,6 @@
   padding-bottom: 30px;
   padding-top: 30px;
 }
+
+
+

@@ -9,9 +9,8 @@ const AllCourse =() =>{
         {title:"C++",description:"This is a C++ course, which will let you learn C++ from beginning"},
     ]);
     return(
-        <div className="text-center">
-            <h1>All Courses</h1>
-            <p>List of Courses are as follows: </p>
+        <div className="text-center my-2">
+            <h2><b>All Courses</b></h2>
 
             {courses.length>0
             ? courses.map((item)=><Course course={item} />)
