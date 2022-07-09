@@ -1,7 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Container, Button} from "reactstrap"
 
 const Home =() => {
+    useEffect(()=>{
+        document.title="Home || Courseo"
+    },[])
     return (
         <div>
             <div className="jumbotron my-2">

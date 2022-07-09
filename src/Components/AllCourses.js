@@ -1,7 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Course from "./Course";
+import axios from "axios"
+import base_url from "../api/bootapi";
 
 const AllCourse =() =>{
+
+    useEffect(()=>{
+        document.title="All Courses || Courseo";
+        getAllCoursesFromServer();
+    },[]);
+    const updateCourse=(id)=>{
+        setCourses(courses.filter((c)=>c.id!==id));
+    }
+
+    const getAllCoursesFromServer=()=>{
+        axios.get(`${base_url}/courses`).then(
+            (response)=>{
+                console.log(response);
+            },
+            (error)=>{
+                console.log(error);
+            }
+        )
+    }
 
     const[courses,setCourses]=useState([
         {title:"Django",description:"This is a django course, which will let you learn django from beginning"},
@@ -13,7 +34,7 @@ const AllCourse =() =>{
             <h2><b>All Courses</b></h2>
 
             {courses.length>0
-            ? courses.map((item)=><Course course={item} />)
+            ? courses.map((item)=><Course course={item} update={updateCourse} />)
             : "No courses"}
         </div>
 
